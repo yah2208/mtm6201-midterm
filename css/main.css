@@ -666,6 +666,222 @@ img {
   color: var(--color-primary);
 }
 
+/* This section holds the contact details and message form */
+.contact {
+  padding-block: 3.5rem 2rem;
+}
+
+.contact__intro {
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.contact__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.contact__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.contact__intro > p:last-child {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 0 0 2.5rem;
+  font-style: normal;
+}
+
+.info-card {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: var(--color-white);
+  border: 1px solid #e6e6ee;
+  border-top: 3px solid var(--color-primary);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(46, 50, 87, 0.06);
+}
+
+.info-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.info-card p {
+  margin: 0;
+}
+
+.info-card a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+.info-card a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* This form sits in the middle of the page */
+.form {
+  max-width: 700px;
+  margin-inline: auto;
+  padding: 2rem;
+  background: var(--color-white);
+  border: 1px solid #e6e6ee;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(46, 50, 87, 0.08);
+}
+
+.form h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form__note {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-white);
+  border: 2px solid #767690;
+  border-radius: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+  border-radius: 12px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(217, 58, 0, 0.15);
+}
+
+.form .btn {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+/* This styles the questions that open when clicked */
+.faq {
+  padding-block: 3rem 4.5rem;
+}
+
+.faq__title {
+  margin: 0 0 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 500;
+  text-align: center;
+}
+
+.faq__list {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.faq__item {
+  margin-bottom: 1rem;
+  background: var(--color-white);
+  border: 1px solid #e6e6ee;
+  border-radius: 16px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq__item summary {
+  position: relative;
+  padding: 1.25rem 3.5rem 1.25rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__item summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+.faq__item[open] {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(46, 50, 87, 0.08);
+}
+
+.faq__item[open] summary::after {
+  content: "\2212";
+}
+
+.faq__answer {
+  margin: 0;
+  padding: 0 1.5rem 1.25rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq__item[open] .faq__answer {
+  animation: reveal 0.35s ease-out;
+}
+
+@media (min-width: 768px) {
+  .form {
+    padding: 2.5rem;
+  }
+}
+
 /* This turns off movement for people who prefer less animation */
 @media (prefers-reduced-motion: reduce) {
   *,

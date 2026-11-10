@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- This tells screen readers which language to use -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This helps the page fit on phones and computers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact and FAQ | Bella Onoje</title>
+  <meta name="description" content="Contact Bella Onoje or find answers about orders, payment, and delivery.">
+
+  <!-- These lines load the Poppins font from Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- This link lets keyboard users skip to the main content -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- This shared header keeps the site navigation consistent -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <img src="images/mylogo.png" alt="Bella Onoje home">
+      </a>
+
+      <!-- This checkbox opens and closes the menu on small screens -->
+      <input class="menu-checkbox visually-hidden" type="checkbox" id="menu-toggle"
+             aria-label="Menu" aria-controls="main-nav">
+      <label class="menu-button" for="menu-toggle">
+        <span class="menu-button__bar"></span>
+        <span class="menu-button__bar"></span>
+        <span class="menu-button__bar"></span>
+      </label>
+
+      <!-- The menu comes after the checkbox so the styles can show it -->
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html#faq">Faq</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main part of the page -->
+  <main id="main">
+    <!-- This banner uses the style from the product page -->
+    <section class="page-banner" aria-labelledby="page-title">
+      <img class="page-banner__photo" src="images/hero1.png" alt="">
+      <div class="container page-banner__content">
+        <p class="page-banner__eyebrow">Help and support</p>
+        <h1 id="page-title">We would love to hear from you</h1>
+        <p>Questions about an order, payment, or delivery? Send us a message.</p>
+      </div>
+    </section>
+
+    <!-- This section has contact details and a message form -->
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__intro">
+          <p class="contact__eyebrow">Get in touch</p>
+          <h2 class="contact__title" id="contact-title">How can we help you</h2>
+          <p>Choose the best way to reach us or send a message using the form</p>
+        </div>
+
+        <!-- These cards show ways to contact the team -->
+        <div class="info-cards">
+          <div class="info-card">
+            <h3>Email</h3>
+            <address><a href="mailto:hello@bellaonoje.example">hello@bellaonoje.example</a></address>
+          </div>
+          <div class="info-card">
+            <h3>Phone</h3>
+            <address><a href="tel:+2348000000000">+234 800 000 0000</a></address>
+          </div>
+          <div class="info-card">
+            <h3>Support hours</h3>
+            <p>Monday to Saturday<br>8:00 to 20:00</p>
+          </div>
+        </div>
+
+        <!-- This sample form checks the required fields in the browser -->
+        <form class="form" action="#" method="post">
+          <h3>Send us a message</h3>
+          <p class="form__note">This sample form does not send messages yet</p>
+
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="topic">What do you need help with?</label>
+            <select id="topic" name="topic" required>
+              <option value="">Choose a topic</option>
+              <option value="order">My order</option>
+              <option value="payment">Payment</option>
+              <option value="delivery">Delivery</option>
+              <option value="app">A problem with the app</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- This section answers common questions -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="faq__title" id="faq-title">Frequently asked questions</h2>
+
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>How do I create an account?</summary>
+            <p class="faq__answer">Open the app and choose Sign up. Use your email and a password to create an account.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary>How can I pay for my order?</summary>
+            <p class="faq__answer">At checkout, you can choose to pay by card or by bank account.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Can I get my order delivered?</summary>
+            <p class="faq__answer">Yes. Choose door delivery at checkout, or choose pickup if you want to collect your meal.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary>I forgot my password. What should I do?</summary>
+            <p class="faq__answer">Choose Forgot password on the login screen and follow the steps to set a new password.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Where can I get the app?</summary>
+            <p class="faq__answer">The Bella Onoje app is available on the Play Store and the App Store.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- This download section matches the other pages -->
+    <section class="cta" aria-labelledby="cta-title">
+      <img class="cta__photo" src="images/hero2.png" alt="" loading="lazy">
+      <div class="container cta__content">
+        <h2 id="cta-title">Download the app now</h2>
+        <p>Available on your favorite store. Start your premium experience now.</p>
+        <div class="cta__buttons">
+          <a class="btn btn--primary" href="#">Playstore</a>
+          <a class="btn btn--outline-light" href="#">App store</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This shared footer keeps the site links consistent -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html">
+        <img src="images/mylogo.png" alt="Bella Onoje home">
+      </a>
+
+      <nav aria-label="Social media">
+        <ul class="social">
+          <li><a href="#" aria-label="Bella Onoje on Twitter"><img src="images/twitter.png" alt=""></a></li>
+          <li><a href="#" aria-label="Bella Onoje on Facebook"><img src="images/fb.png" alt=""></a></li>
+          <li><a href="#" aria-label="Bella Onoje on Instagram"><img src="images/instagram.png" alt=""></a></li>
+        </ul>
+      </nav>
+
+      <p class="copyright">Copyright 2026 Bella Onoje</p>
+    </div>
+  </footer>
+</body>
+</html>
