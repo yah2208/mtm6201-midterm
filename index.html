@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- This tells screen readers which language to use -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This helps the page fit on phones and computers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bella Onoje | Order food from our app</title>
+  <meta name="description" content="Download the Bella Onoje food app: explore your favourite meals, check out and get them delivered.">
+
+  <!-- These lines load the Poppins font from Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- This link lets keyboard users skip to the main content -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- This is the top area with the logo and page links -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <img src="images/mylogo.png" alt="Bella Onoje home">
+      </a>
+
+      <!-- This checkbox opens and closes the menu on small screens -->
+      <input class="menu-checkbox visually-hidden" type="checkbox" id="menu-toggle"
+             aria-label="Menu" aria-controls="main-nav">
+      <label class="menu-button" for="menu-toggle">
+        <span class="menu-button__bar"></span>
+        <span class="menu-button__bar"></span>
+        <span class="menu-button__bar"></span>
+      </label>
+
+      <!-- The menu comes after the checkbox so the styles can show it -->
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html#faq">Faq</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main part of the page -->
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- This photo fills the top part of the page -->
+      <div class="hero__banner">
+        <img class="hero__photo" src="images/hero1.png" alt="">
+
+        <div class="container hero__content">
+          <p class="hero__eyebrow">Food app</p>
+          <h1 id="hero-title">Why stay hungry when you can order from Bella Onoje</h1>
+          <p class="hero__text">Download the Bella Onoje food app now on</p>
+
+          <div class="hero__buttons">
+            <a class="btn btn--primary" href="#">Playstore</a>
+            <a class="btn btn--outline-light" href="#">App store</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- This picture shows the food app on two phones -->
+      <div class="container hero__phones">
+        <img src="images/app.png"
+             alt="Two phones showing the food app welcome screen and food menu">
+      </div>
+    </section>
+  </main>
+</body>
+</html>
