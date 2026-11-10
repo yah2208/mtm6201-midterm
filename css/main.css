@@ -516,6 +516,156 @@ img {
   }
 }
 
+/* This is a shorter banner for the product page */
+.page-banner {
+  position: relative;
+  padding-block: 4rem;
+  color: var(--color-white);
+  text-align: center;
+  background: var(--color-navy);
+}
+
+.page-banner__photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* This dark layer helps the white words stand out */
+.page-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(20, 20, 30, 0.65);
+}
+
+.page-banner__content {
+  position: relative;
+  z-index: 2;
+  animation: fade-up 0.9s ease-out both;
+}
+
+.page-banner__eyebrow {
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+}
+
+.page-banner h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.page-banner__content p:last-child {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* These links jump to food sections on the page */
+.category-nav {
+  padding-top: 2rem;
+}
+
+.category-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-block: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.75rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.category-nav a:hover {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+/* This adds space around each food category */
+.menu-section {
+  padding-block: 2.5rem;
+}
+
+.menu-section h2 {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+}
+
+.menu-section h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 0.5rem;
+  background: var(--color-primary);
+  border-radius: 999px;
+}
+
+/* This grid fits as many food cards as the screen allows */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.dish {
+  padding: 1.5rem;
+  background: var(--color-white);
+  border: 1px solid #e6e6ee;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.dish:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(46, 50, 87, 0.12);
+}
+
+.dish h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.dish__desc {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.dish__price {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
 /* This turns off movement for people who prefer less animation */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- This tells screen readers which language to use -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This helps the page fit on phones and computers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Menu | Bella Onoje</title>
+  <meta name="description" content="Explore meals, sides, and drinks from Bella Onoje.">
+
+  <!-- These lines load the Poppins font from Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- This link lets keyboard users skip to the main content -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- This header is the same one used on the home page -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <img src="images/mylogo.png" alt="Bella Onoje home">
+      </a>
+
+      <!-- This checkbox opens and closes the menu on small screens -->
+      <input class="menu-checkbox visually-hidden" type="checkbox" id="menu-toggle"
+             aria-label="Menu" aria-controls="main-nav">
+      <label class="menu-button" for="menu-toggle">
+        <span class="menu-button__bar"></span>
+        <span class="menu-button__bar"></span>
+        <span class="menu-button__bar"></span>
+      </label>
+
+      <!-- The menu comes after the checkbox so the styles can show it -->
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html" aria-current="page">Product</a></li>
+          <li><a href="contact.html#faq">Faq</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main part of the page -->
+  <main id="main">
+    <!-- This banner introduces the food menu -->
+    <section class="page-banner" aria-labelledby="page-title">
+      <img class="page-banner__photo" src="images/hero1.png" alt="">
+      <div class="container page-banner__content">
+        <p class="page-banner__eyebrow">Bella Onoje menu</p>
+        <h1 id="page-title">Find your new favorite</h1>
+        <p>Fresh meals and drinks made for you</p>
+      </div>
+    </section>
+
+    <!-- These links jump to each menu section -->
+    <nav class="category-nav" aria-label="Food categories">
+      <ul class="category-nav__list">
+        <li><a href="#meals">Meals</a></li>
+        <li><a href="#sides">Sides</a></li>
+        <li><a href="#drinks">Drinks</a></li>
+      </ul>
+    </nav>
+
+    <!-- These cards show meals with their names and prices -->
+    <section class="menu-section container" id="meals" aria-labelledby="meals-title">
+      <h2 id="meals-title">Meals</h2>
+      <div class="menu-grid">
+        <article class="dish">
+          <img class="dish__image" src="images/food/Veggietomatomix.jpg"
+               alt="A bowl of pasta and vegetables in tomato sauce" loading="lazy">
+          <h3>Veggie Tomato Mix</h3>
+          <p class="dish__desc">A fresh mix of vegetables with a rich tomato sauce</p>
+          <p class="dish__price">₦1,900</p>
+        </article>
+        <article class="dish">
+          <img class="dish__image" src="images/food/Spicyfoodsauce.jpg"
+               alt="Red peppers and spices beside a bowl of sauce" loading="lazy">
+          <h3>Spicy Food Sauce</h3>
+          <p class="dish__desc">A tasty, spicy meal made with fresh ingredients</p>
+          <p class="dish__price">₦2,300</p>
+        </article>
+        <article class="dish">
+          <img class="dish__image" src="images/food/Grilledchickenbowl.jpg"
+               alt="A bowl with grilled chicken, rice, vegetables, and avocado" loading="lazy">
+          <h3>Grilled Chicken Bowl</h3>
+          <p class="dish__desc">Grilled chicken served with vegetables and rice</p>
+          <p class="dish__price">₦3,500</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-section container" id="sides" aria-labelledby="sides-title">
+      <h2 id="sides-title">Sides</h2>
+      <div class="menu-grid">
+        <article class="dish">
+          <img class="dish__image" src="images/food/Seasonedfries.jpg"
+               alt="Golden seasoned potato fries" loading="lazy">
+          <h3>Seasoned Fries</h3>
+          <p class="dish__desc">Crispy potato fries with a light seasoning</p>
+          <p class="dish__price">₦1,200</p>
+        </article>
+        <article class="dish">
+          <img class="dish__image" src="images/food/Gardensalad.jpg"
+               alt="A fresh salad with lettuce, tomatoes, and croutons" loading="lazy">
+          <h3>Garden Salad</h3>
+          <p class="dish__desc">Fresh greens with tomato and a light dressing</p>
+          <p class="dish__price">₦1,500</p>
+        </article>
+        <article class="dish">
+          <img class="dish__image" src="images/food/Friedplantain.jpg"
+               alt="Fried plantain served on a plate" loading="lazy">
+          <h3>Plantain</h3>
+          <p class="dish__desc">Sweet plantain, fried until golden</p>
+          <p class="dish__price">₦1,000</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-section container" id="drinks" aria-labelledby="drinks-title">
+      <h2 id="drinks-title">Drinks</h2>
+      <div class="menu-grid">
+        <article class="dish">
+          <img class="dish__image" src="images/food/Freshorangejuice.jpg"
+               alt="A glass of fresh orange juice" loading="lazy">
+          <h3>Fresh Orange Juice</h3>
+          <p class="dish__desc">Freshly squeezed orange juice</p>
+          <p class="dish__price">₦1,200</p>
+        </article>
+        <article class="dish">
+          <img class="dish__image" src="images/food/Lemonwater.jpg"
+               alt="A glass of lemon water with fresh lemon slices" loading="lazy">
+          <h3>Lemon Water</h3>
+          <p class="dish__desc">Cool water with a squeeze of fresh lemon</p>
+          <p class="dish__price">₦800</p>
+        </article>
+        <article class="dish">
+          <img class="dish__image" src="images/food/Berrysmoothie.jpg"
+               alt="A berry smoothie topped with fresh berries" loading="lazy">
+          <h3>Berry Smoothie</h3>
+          <p class="dish__desc">A cold, creamy blend of berries</p>
+          <p class="dish__price">₦1,800</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- This download banner is the same one used on the home page -->
+    <section class="cta" aria-labelledby="cta-title">
+      <img class="cta__photo" src="images/hero2.png" alt="" loading="lazy">
+      <div class="container cta__content">
+        <h2 id="cta-title">Download the app now</h2>
+        <p>Available on your favorite store. Start your premium experience now</p>
+        <div class="cta__buttons">
+          <a class="btn btn--primary" href="#">Playstore</a>
+          <a class="btn btn--outline-light" href="#">App store</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This footer is the same one used on the home page -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html">
+        <img src="images/mylogo.png" alt="Bella Onoje home">
+      </a>
+
+      <nav aria-label="Social media">
+        <ul class="social">
+          <li><a href="#" aria-label="Bella Onoje on Twitter"><img src="images/twitter.png" alt=""></a></li>
+          <li><a href="#" aria-label="Bella Onoje on Facebook"><img src="images/fb.png" alt=""></a></li>
+          <li><a href="#" aria-label="Bella Onoje on Instagram"><img src="images/instagram.png" alt=""></a></li>
+        </ul>
+      </nav>
+
+      <p class="copyright">Copyright 2026 Bella Onoje</p>
+    </div>
+  </footer>
+</body>
+</html>
