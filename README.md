@@ -1,4 +1,4 @@
-# mtm6201-midterm – Bella Onoje
+# mtm6201-midterm - Bella Onoje
 
 A responsive 3-page website made with plain HTML and CSS. It does not use Bootstrap.
 
